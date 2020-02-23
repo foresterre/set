@@ -96,13 +96,13 @@ mod tests {
     fn deck_has_unique_cards() {
         let mut set = std::collections::HashSet::new();
 
-        for card in Deck::standard().cards() {
+        for card in Deck::default().cards() {
             assert!(set.insert(card))
         }
     }
 
     #[test]
     fn deck_has_size() {
-        assert_eq!(Deck::standard().cards().count(), 3 * 3 * 3 * 3);
+        assert_eq!(Deck::default().cards().count(), 3 * 3 * 3 * 3);
     }
 }
